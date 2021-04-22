@@ -7,3 +7,5 @@ COPY ./ssd-cneos-api-suites /apitests/
 WORKDIR /apitests
 RUN python3 setup.py install
 
+ENTRYPOINT ["/run_docker.sh"]
+
