@@ -32,6 +32,7 @@ def get_auth(request):
 
 @fixture(scope="session")
 def app_config(get_env, get_auth):
+    """Initialising a fixture with a session scope that holds all the command line arguments"""
     cfg = Config(get_env, get_auth)
     return cfg
 

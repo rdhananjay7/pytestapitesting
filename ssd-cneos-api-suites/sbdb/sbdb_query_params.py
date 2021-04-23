@@ -1,4 +1,4 @@
-sbdb_get_query_params = {
+get_sbdb = {
     "des": "433",
     "date-min": "1900-01-01",
     "date-max": "2100-01-01",

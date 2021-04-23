@@ -1,7 +1,7 @@
 import logging as logger
 from pytest import mark
 import requests
-import payloads
+import sbdb_query_params
 
 
 class SBDBTests:
@@ -13,7 +13,7 @@ class SBDBTests:
         """Test the SBDB Close GET api"""
 
         logger.info("Hitting an SBDB Close api for get response")
-        response = requests.get(app_config.base_url + self.PATH, params=payloads.sbdb_get_query_params)
+        response = requests.get(app_config.base_url + self.PATH, params=sbdb_query_params.get_sbdb)
 
         logger.info("Validating the response to check if status code == 200")
         assert response.status_code == 200
