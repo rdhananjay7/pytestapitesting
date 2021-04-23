@@ -59,7 +59,7 @@ docker build -t sbdbapitests .
 ./bin/run_docker.sh
 ```
 
-##Approach: 
+## Approach: 
 
 In this approach;
 
