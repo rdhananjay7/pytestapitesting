@@ -23,7 +23,7 @@ The solution is designed to address the following objectives;
 In order to run a containerised test execution on your local machine, you need to download/clone this Git repository onto your local machine.
 
 ```bash
-gh repo clone rdhananjay7/pytestapitesting
+git clone rdhananjay7/pytestapitesting
 ```
 
 Move to the project home directory
@@ -32,18 +32,18 @@ Move to the project home directory
 $ cd /Users/rdhananjay7/python-projects/api-testing
 $ ls -ltr
 total 312
--rwxr-xr-x   1 argadeda  staff     305 Apr 22 01:52 pytest.ini
--rw-r--r--   1 argadeda  staff     344 Apr 22 19:44 requirements.txt
-drwxr-xr-x   3 argadeda  staff      96 Apr 23 01:12 logs
-drwxr-xr-x   5 argadeda  staff     160 Apr 23 01:15 venv
--rw-r--r--   1 argadeda  staff     163 Apr 23 01:35 Dockerfile
-drwxr-xr-x  15 argadeda  staff     480 Apr 23 15:35 archive
-drwxr-xr-x   5 argadeda  staff     160 Apr 23 16:26 bin
-drwxr-xr-x  10 argadeda  staff     320 Apr 23 16:28 ssd-cneos-api-suites
-drwxr-xr-x   3 argadeda  staff      96 Apr 23 16:33 report
--rw-r--r--   1 argadeda  staff     841 Apr 23 17:08 output.json
--rw-r--r--   1 argadeda  staff  137284 Apr 23 17:08 pytest_html_report.html
--rw-r--r--   1 argadeda  staff    1824 Apr 23 17:51 README.md
+-rwxr-xr-x   1 rdhananjay7  staff     305 Apr 22 01:52 pytest.ini
+-rw-r--r--   1 rdhananjay7  staff     344 Apr 22 19:44 requirements.txt
+drwxr-xr-x   3 rdhananjay7  staff      96 Apr 23 01:12 logs
+drwxr-xr-x   5 rdhananjay7  staff     160 Apr 23 01:15 venv
+-rw-r--r--   1 rdhananjay7  staff     163 Apr 23 01:35 Dockerfile
+drwxr-xr-x  15 rdhananjay7  staff     480 Apr 23 15:35 archive
+drwxr-xr-x   5 rdhananjay7  staff     160 Apr 23 16:26 bin
+drwxr-xr-x  10 rdhananjay7  staff     320 Apr 23 16:28 ssd-cneos-api-suites
+drwxr-xr-x   3 rdhananjay7  staff      96 Apr 23 16:33 report
+-rw-r--r--   1 rdhananjay7  staff     841 Apr 23 17:08 output.json
+-rw-r--r--   1 rdhananjay7  staff  137284 Apr 23 17:08 pytest_html_report.html
+-rw-r--r--   1 rdhananjay7  staff    1824 Apr 23 17:51 README.md
 
 ```
 
@@ -57,6 +57,21 @@ docker build -t sbdbapitests .
 
 ```bash
 ./bin/run_docker.sh
+```
+
+### Test Report 
+
+Test Reports are available on host machine under /reports directory
+
+```
+$ pwd
+/Users/rdhananjay7/python-projects/api-testing
+$ cd report
+$ ls -ltr
+total 0
+drwxr-xr-x  4 rdhananjay7  staff  128 Apr 23 16:33 report.2021.04.23-16.33.30
+drwxr-xr-x  4 rdhananjay7  staff  128 Apr 23 17:55 report.2021.04.23-17.55.44
+$ 
 ```
 
 ## Approach: 
