@@ -18,12 +18,12 @@ The solution is designed to address the following objectives;
 
 ## Steps to execute
 
-### Checkout a GIT repository
+### 1. Checkout a GIT repository
 
 In order to run a containerised test execution on your local machine, you need to download/clone this Git repository onto your local machine.
 
 ```bash
-git clone rdhananjay7/pytestapitesting
+$ git clone rdhananjay7/pytestapitesting
 ```
 
 Move to the project home directory
@@ -47,19 +47,19 @@ drwxr-xr-x   3 rdhananjay7  staff      96 Apr 23 16:33 report
 
 ```
 
-### Build a Docker image
+### 2. Build a Docker image
 
 ```bash
-docker build -t sbdbapitests .
+$ docker build -t sbdbapitests .
 ```
 
-### Execute tests inside a Container
+### 3. Execute tests inside a Container
 
 ```bash
-./bin/run_docker.sh
+$ ./bin/run_tests.sh
 ```
 
-### Test Report 
+### 4. Test Report 
 
 Test Reports are available on host machine under /reports directory
 
@@ -93,3 +93,19 @@ In this approach;
 3.	Runner Scripts, to run the tests and to clean up the logs
 4.	Command line support for parameterizing the run
 5.	Properties file to set up the environment variables that can be sourced while running a runner script
+
+
+## Troubleshooting
+
+#### 1. Unable to find image
+While running tests, you come across following issue
+```bash
+$ ./bin/run_tests.sh
+Unable to find image 'sbdbapitests:latest' locally
+```
+
+#### Solution:
+You should build the docker image before running the tests. Docker image can be built by following the step #2 in the execution steps provided above.
+
+
+

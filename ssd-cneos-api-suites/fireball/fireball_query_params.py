@@ -1,3 +1,3 @@
-latest_twenty_records = {
-    "limit": "20"
+get_fireball_health_check = {
+    "limit": "1"
 }
